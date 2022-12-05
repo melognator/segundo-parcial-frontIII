@@ -29,7 +29,7 @@ const SocialLinks = () => {
 
     return (
         <div className='social-icons-container'>
-            {socialIcons.map(icon => (<IconLink {...icon} />))}
+            {socialIcons.map(icon => (<IconLink key={icon.alt} {...icon} />))}
         </div>
     )
 }
