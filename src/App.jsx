@@ -5,6 +5,7 @@ import FavsPage from "./Routes/FavsPage/FavsContainer";
 import HomePage from "./Routes/HomePage/HomeContainer";
 import NotFoundPage from "./Routes/NotFoundPage/NotFound";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ContextProvider } from "./Components/utils/global.context";
 
 
 function App() {

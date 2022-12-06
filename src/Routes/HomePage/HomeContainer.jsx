@@ -1,26 +1,13 @@
-import axios from 'axios'
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useContext } from 'react'
+import { ContextGlobal } from '../../Components/utils/global.context'
 import Home from './Home'
 
 const HomeContainer = () => {
 
-    const [dentistas, setDentistas] = useState([]);
+    const { datos } = useContext(ContextGlobal); 
 
-    useEffect(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(respuesta => {
-            // console.log(respuesta)
-            setDentistas(respuesta.data)
-        })
-        .catch(err => {
-            console.log("Promesa rechazada: ")
-            console.log(err)
-        })
-    }, [])
-
-    return <Home dentistas={dentistas} />
+    return <Home dentistas={datos.dentists} />
 }
 
 export default HomeContainer
