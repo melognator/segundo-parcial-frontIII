@@ -27,6 +27,10 @@ h1{
   text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 a{
   color: #000;
   text-decoration: none;
@@ -61,13 +65,13 @@ form{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
 main {
     padding: 1rem;
+    min-height:calc(100vh - 56px - 40px);
 }
 
 .dentist-card{
@@ -159,7 +163,6 @@ footer.dark img {
 .dark .social-icons-container img {
     filter: none;
 }
-
 
 .social-icons-container a {
     margin: 5px;
