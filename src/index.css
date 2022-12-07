@@ -42,15 +42,10 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-/* footer {
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-} */
+footer {
+    background-color: #f8f9fa;
+    height: 40px;
+}
 
 footer img{
   width: 200px;

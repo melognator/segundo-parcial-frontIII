@@ -38,11 +38,11 @@ const Form = () => {
             <FormB onSubmit={(e) => handleSubmit(e)}>
                 <FormB.Group className="mb-3" controlId="formBasicName">
                     <FormB.Label>Name</FormB.Label>
-                    <FormB.Control value={formData.name} autocomplete="off" onChange={e => handleName(e)} minLength={minLength} required type="text" placeholder="Nick Wilde" />
+                    <FormB.Control value={formData.name} autoComplete="off" onChange={e => handleName(e)} minLength={minLength} required type="text" placeholder="Nick Wilde" />
                 </FormB.Group>
                 <FormB.Group className="mb-3" controlId="formBasicEmail">
                     <FormB.Label>Email address</FormB.Label>
-                    <FormB.Control value={formData.email} autocomplete="off" onChange={e => handleEmail(e)} required type="email" placeholder="nick@example.com" />
+                    <FormB.Control value={formData.email} autoComplete="off" onChange={e => handleEmail(e)} required type="email" placeholder="nick@example.com" />
                 </FormB.Group>
 
                 <Button variant="primary" type="submit">
