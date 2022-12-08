@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import FormB from 'react-bootstrap/Form';
 import { useState } from "react";
+import { contactSuccess } from "./Alerts/Alert";
 
 
 const Form = () => {
@@ -14,7 +15,7 @@ const Form = () => {
         email: ""
     }
 
-    const [submitted, setSubmitted] = useState(null);
+    // const [submitted, setSubmitted] = useState(null);
     const [formData, setFormData] = useState(initialState);
 
     const handleName = (e) => {
@@ -28,8 +29,9 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
+        contactSuccess(formData.name)
         setFormData(initialState)
-        setSubmitted(<p className="text-center mt-2">Thanks for submitting! We'll contact you soon.</p>)
+        // setSubmitted(<p className="text-center mt-2">Thanks for submitting! We'll contact you soon.</p>)
     }
 
 
@@ -49,7 +51,7 @@ const Form = () => {
                     Submit
                 </Button>
             </FormB>
-            { submitted }
+            {/* { submitted } */}
         </Container>
     );
 };

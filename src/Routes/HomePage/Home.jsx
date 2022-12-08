@@ -6,17 +6,15 @@ import Dentists from '../../Components/Dentists'
 
 const Home = () => {
 
-    const {datos} = useContext(ContextGlobal)
-
-    const tema = datos.theme
+    const { datos } = useContext(ContextGlobal)
 
     return (
-        <main className={tema} >
+        <>
             <h1>Home</h1>
             <div className='card-grid'>
-                <Dentists dentists={datos.dentists} />
+                <Dentists dentists={ datos.dentists } />
             </div>
-        </main>
+        </>
     )
 }
 

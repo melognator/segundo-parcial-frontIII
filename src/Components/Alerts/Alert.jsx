@@ -15,6 +15,26 @@ export const addFavSuccess = (dentistName) => {
       })
 }
 
+export const contactSuccess = (name) => {
+    MySwal.fire({
+        title: <strong>Thanks for submitting! :)</strong>,
+        html: <i>We'll contact you soon {name}.</i>,
+        icon: 'success',
+        timer: 3000,
+        showConfirmButton: false,
+      })
+}
+
+export const removeFavSuccess = (dentistName) => {
+    MySwal.fire({
+        title: <strong>Dentist de-faved succesfully :)</strong>,
+        html: <i>The dentist {dentistName} was removed from favs</i>,
+        icon: 'success',
+        timer: 1500,
+        showConfirmButton: false,
+      })
+}
+
 export const addFavFail = (dentistName) => {
     MySwal.fire({
         title: <strong>Couldn't fav the dentist :(</strong>,

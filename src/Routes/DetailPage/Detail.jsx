@@ -6,11 +6,10 @@ import { ContextGlobal } from '../../Components/utils/global.context'
 const Detail = ({ id, name, email, website, phone }) => {
 
     const { datos } = useContext(ContextGlobal)
-
     const tema = datos.theme
 
     return (
-        <main className={tema} >
+        <>
             <Container>
                 <h1>Detail Dentist {id}</h1>
                 <Table className={`table-${tema}`} striped bordered hover>
@@ -32,7 +31,7 @@ const Detail = ({ id, name, email, website, phone }) => {
                     </tbody>
                 </Table>
             </Container>
-        </main>
+        </>
     )
 }
 

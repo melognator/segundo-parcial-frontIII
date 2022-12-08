@@ -6,15 +6,13 @@ const Favs = ({dentists}) => {
 
     const { datos } = useContext(ContextGlobal)
 
-    const tema = datos.theme
-
     return (
-        <main className={tema}>
+        <>
             <h1>Dentists Favs</h1>
             <div className="card-grid">
-                <Dentists dentists={dentists} />
+                <Dentists dentists={datos.favDentists} />
             </div>
-        </main>
+        </>
     );
 };
 
