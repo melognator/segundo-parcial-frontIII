@@ -13,7 +13,7 @@ const Layout = () => {
     return (
         <div className="App">
             <Navbar />
-            <main className={tema}>
+            <main className={tema} >
                 <Outlet />
             </main>
             <Footer />

@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useMemo, useReducer } from "react";
 import { addFavSuccess, removeFavSuccess } from '../Alerts/Alert'
 
@@ -41,15 +40,6 @@ export const ContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducerFunction, initialState)
 
     useMemo(() => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(respuesta => {
-            // console.log(respuesta)
-            dispatch({type: "dentists", dentists: respuesta.data})
-        })
-        .catch(err => {
-            console.log("Promesa rechazada: ")
-            console.log(err)
-        })
         const favs = JSON.parse(localStorage.getItem("favs"))
         if (favs) {
             dispatch({type: "favDentists", favDentists: favs})

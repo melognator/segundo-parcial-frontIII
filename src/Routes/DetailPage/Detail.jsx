@@ -1,12 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
-import { ContextGlobal } from '../../Components/utils/global.context'
 
-const Detail = ({ id, name, email, website, phone }) => {
-
-    const { datos } = useContext(ContextGlobal)
-    const tema = datos.theme
+const Detail = ({ id, name, email, website, phone, tema }) => {
 
     return (
         <>

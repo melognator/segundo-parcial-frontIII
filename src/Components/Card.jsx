@@ -1,19 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { ContextGlobal } from "./utils/global.context";
 
-const Card = ({ name, username, id, handleFav }) => {
-
-    const { isFaved } = useContext(ContextGlobal);
+const Card = ({ name, username, id, handleFav, isFaved }) => {
 
     return (
-
 
         <div className="dentist-card">
             <img src="/images/doctor.jpg" alt={`${name}`} />
             <div className="info">
-                <Link to={`/dentist/${id}`} >{name}</Link>
-                <p>{username}</p>
+                {/* eslint-disable-next-line */}
+                <Link role="dentist-name" to={`/dentist/${id}`} >{name}</Link>
+                {/* eslint-disable-next-line */}
+                <p role="dentist-username">{username}</p>
             </div>
             <button onClick={() => handleFav({ name, username, id })} className="favButton">{isFaved(id) ? "❌" : "⭐"}</button>
         </div>
