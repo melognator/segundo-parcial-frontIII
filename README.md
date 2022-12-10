@@ -2,6 +2,10 @@
 
 Examen Final de Frontend III
 
+# Link para probar la aplicacion:
+https://fe3-parcial.vercel.app/home
+
+
 ## Indice
 
 - [Requisitos](#requisitos)
